@@ -1,0 +1,26 @@
+---
+  - name: check frontend health playbook
+    hosts: frontends
+    remote_user: root
+    tasks:
+
+    - name: check condor
+      service:
+          name: condor
+          enabled: yes
+          state: started
+
+    - name: check frontend
+      service:
+          name:  gwms-frontend
+          enabled: yes
+          state: started
+
+    - name: check connectivity
+      shell: |
+          /usr/bin/condor_status -any -wide
+      register: statuscmd
+      tags: statuscmd
+
+    - debug: msg="{{statuscmd.stdout}}"
+...

@@ -1,0 +1,29 @@
+---
+  - name: factory playbook
+    hosts: factories
+    remote_user: root
+    tasks:
+
+    - name: restart condor
+      service:
+          name: condor
+          enabled: yes
+          state: restarted
+
+    - name: stop factory
+      service:
+          name:  gwms-factory
+          enabled: yes
+          state: stopped
+
+    - name: upgrade factory
+      shell: |
+          /usr/sbin/gwms-factory upgrade
+
+    - name: start factory
+      service:
+          name: gwms-factory
+          enabled: yes
+          state: started
+
+...

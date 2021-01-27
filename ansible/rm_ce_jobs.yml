@@ -1,0 +1,12 @@
+---
+  - name: rm_ce_jobs playbook
+    hosts: all
+    remote_user: root
+
+    tasks:
+
+
+    - name: rm_jobs
+      shell: | 
+          condor_rm osg && condor_rm -forcex osg && condor_ce_rm osg
+...

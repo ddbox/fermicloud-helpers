@@ -1,0 +1,30 @@
+---
+  - name: frontend playbook
+    hosts: frontends
+    remote_user: root
+    tasks:
+    - name: refresh proxy
+      shell: |
+         cp /tmp/nova_proxy /tmp/vo_proxy
+         chown frontend /tmp/vo_proxy
+         cp /tmp/nova_proxy /tmp/frontend_proxy
+         chown frontend /tmp/frontend_proxy
+         cp /tmp/nova_proxy /tmp/grid_proxy
+         chown testuser /tmp/grid_proxy
+
+    - name: stop server
+      service:
+          name:  gwms-frontend
+          enabled: yes
+          state: stopped
+
+    - name: upgrade server
+      shell: |
+          /usr/sbin/gwms-frontend upgrade
+
+    - name: start server
+      service:
+          name: gwms-frontend
+          enabled: yes
+          state: started
+...

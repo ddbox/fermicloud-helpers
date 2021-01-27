@@ -1,0 +1,18 @@
+---
+  - name: check factory health playbook
+    hosts: factories
+    remote_user: root
+    tasks:
+
+    - name: check condor
+      service:
+          name: condor
+          enabled: yes
+          state: started
+
+    - name: check factory
+      service:
+          name:  gwms-factory
+          enabled: yes
+          state: started
+...

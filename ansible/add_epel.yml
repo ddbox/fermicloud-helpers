@@ -1,0 +1,23 @@
+---
+  - name: add some crap
+    hosts: newbies
+    vars: 
+      osg_ver: 3.5
+    tasks:
+      - name: Add EPEL repo
+        yum_repository:
+          name: epel
+          description: EPEL YUM repo
+          baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+          mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=epel-{{ ansible_distribution_major_version }}&arch=$basearch&infra=$infra&content=$contentdir
+          gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
+          enabled: yes
+          gpgcheck: yes
+          state: present
+      - name: Add osg repo
+        yum_repository:
+          name: osg
+          description: osg repo
+          baseurl: https://repo.opensciencegrid.org/osg/{{ osg_ver }}/osg-{{ osg_ver }}-el{{ ansible_distribution_major_version }}-release-latest.rpm
+
+
