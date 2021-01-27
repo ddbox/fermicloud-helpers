@@ -1,5 +1,5 @@
 ---
-  - name: gwms frontend packages install
+  - name: install epel, osg rpms
     hosts: all
     remote_user: root
     vars:
@@ -10,10 +10,10 @@
         osg_url: "https://repo.opensciencegrid.org/osg/{{osg_rel}}/osg-{{osg_rel}}-el{{os_major}}-release-latest.rpm"
     tasks:
 
-  - name: install_epel_osg_rpms.yml
-    import_playbook: install_epel_osg_rpms.yml
+    - name: install {{epel_url}}
+      yum: name={{epel_url}}
 
-  - name: install_frontend_rpms.yml
-    import_playbook: install_frontend_rpms.yml
+    - name: install {{osg_url}}
+      yum: name={{osg_url}}
 
 ...

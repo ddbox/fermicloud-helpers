@@ -1,5 +1,5 @@
 ---
-  - name: gwms frontend packages install
+  - name: gwms factory packages install
     hosts: all
     remote_user: root
     vars:
@@ -10,10 +10,16 @@
         osg_url: "https://repo.opensciencegrid.org/osg/{{osg_rel}}/osg-{{osg_rel}}-el{{os_major}}-release-latest.rpm"
     tasks:
 
-  - name: install_epel_osg_rpms.yml
-    import_playbook: install_epel_osg_rpms.yml
+    - name: install osg stuff
+      yum:
+          name:
+              - yum-priorities
+              - osg-ca-certs
+          state:
+              present
 
-  - name: install_frontend_rpms.yml
-    import_playbook: install_frontend_rpms.yml
-
+    - name: install factory
+      yum:
+          name: glideinwms-factory
+          enablerepo: "{{osg_repo}}"
 ...

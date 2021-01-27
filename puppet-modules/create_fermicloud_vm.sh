@@ -93,7 +93,7 @@ while [[ $# -gt 0 ]] ; do
             help
             exit 0;;
         *)
-            echo "Invalid option: $1" &2
+            echo "Invalid option: $1" >&2
             exit 1 ;;
     esac
     shift
@@ -116,6 +116,9 @@ fqdn=`vm_hostname $vmid`
 
 touch /tmp/installed.nodes
 echo $vm_name $fqdn >> /tmp/installed.nodes
+
+touch inventory
+echo $fqdn >> inventory
 
 fqdn_status="down"
 #if [ -z `ssh-keygen -F $fqdn` ]; then
