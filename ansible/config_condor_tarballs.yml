@@ -1,20 +1,16 @@
 ---
-  - name: condor tarball debuggery
+  - name: condor tarball stuff
     hosts: all
-    debugger: on_failed
+    # debugger: on_failed
     remote_user: root
     vars:
-        osg_rel: 3.5
-        osg_repo: "osg"
-        os_major: 7
-        epel_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{os_major}}.noarch.rpm"
-        osg_url: "https://repo.opensciencegrid.org/osg/{{osg_rel}}/osg-{{osg_rel}}-el{{os_major}}-release-latest.rpm"
+        condor_arch: x86_64
+        condor_os: CentOS7
         condor_rel: 8.8.12
-        condor_rel2: 8.9.11
-        condor_tarball: "condor-{{condor_rel}}-x86_64_CentOS7-stripped.tar.gz"
-        condor_tarball2: "condor-{{condor_rel2}}-x86_64_CentOS7-stripped.tar.gz"
-        condor_url: "https://research.cs.wisc.edu/htcondor/tarball/8.8/{{condor_rel}}/release/{{condor_tarball}}"
-        condor_url2: "https://research.cs.wisc.edu/htcondor/tarball/current/{{condor_rel2}}/release/{{condor_tarball2}}"
+        #condor_srel is 8.8 if condor_rel is 8.8.12
+        condor_srel: "{{condor_rel | regex_replace('^([^.]*).([^.]*).*', '\\1.\\2') }}"
+        condor_tarball: "condor-{{condor_rel}}-{{condor_arch}}_{{condor_os}}-stripped.tar.gz"
+        condor_url: "https://research.cs.wisc.edu/htcondor/tarball/{{condor_srel}}/{{condor_rel}}/release/{{condor_tarball}}"
 
     tasks:
 
@@ -23,10 +19,6 @@
           url: "{{condor_url}}"
           dest: "/var/lib/gwms-factory/condor/{{condor_tarball}}"
 
-      - name: "get condor {{condor_url2}}"
-        get_url:
-          url: "{{condor_url2}}"
-          dest: "/var/lib/gwms-factory/condor/{{condor_tarball2}}"
 
       - name: "untar {{condor_tarball}}"
         shell: |
@@ -34,10 +26,5 @@
         args:
           warn: false
 
-      - name: "untar {{condor_tarball2}}"
-        shell: |
-          /usr/bin/tar -C /var/lib/gwms-factory/condor/ -x -z  -f /var/lib/gwms-factory/condor/{{condor_tarball2}}
-        args:
-          warn: false
 
 ...
