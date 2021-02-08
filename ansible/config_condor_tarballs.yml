@@ -9,7 +9,8 @@
         condor_rel: 8.8.12
         #condor_srel is 8.8 if condor_rel is 8.8.12
         condor_srel: "{{condor_rel | regex_replace('^([^.]*).([^.]*).*', '\\1.\\2') }}"
-        condor_tarball: "condor-{{condor_rel}}-{{condor_arch}}_{{condor_os}}-stripped.tar.gz"
+        condor_basedir: "condor-{{condor_rel}}-{{condor_arch}}_{{condor_os}}-stripped"
+        condor_tarball: "{{condor_basedir}}.tar.gz"
         condor_url: "https://research.cs.wisc.edu/htcondor/tarball/{{condor_srel}}/{{condor_rel}}/release/{{condor_tarball}}"
 
     tasks:
@@ -25,6 +26,12 @@
           /usr/bin/tar -C /var/lib/gwms-factory/condor/ -x -z  -f /var/lib/gwms-factory/condor/{{condor_tarball}}
         args:
           warn: false
+
+      - name: "add info to tarball config file"
+        ansible.builtin.lineinfile:
+          path: /etc/gwms-factory/config.d/Condor_Tarballs.xml
+          insertbefore: '</condor_tarballs>' 
+          line: '       <condor_tarball arch="{{condor_arch}}" base_dir="/var/lib/gwms-factory/{{condor_basedir}}" os="{{condor_os}}" version="{{condor_rel}}"/>'
 
 
 ...

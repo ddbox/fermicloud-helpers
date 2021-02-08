@@ -1,0 +1,397 @@
+[
+  {
+    "sha": "0ade01eac97b8edf3d78cc9399b6da14edf53115",
+    "node_id": "MDY6Q29tbWl0MzMzNDQ4Mzg0OjBhZGUwMWVhYzk3YjhlZGYzZDc4Y2M5Mzk5YjZkYTE0ZWRmNTMxMTU=",
+    "commit": {
+      "author": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-28T20:42:53Z"
+      },
+      "committer": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-28T20:42:53Z"
+      },
+      "message": "removed copy/paste repitition from config_condor_tarballs.yml",
+      "tree": {
+        "sha": "546e2115fbe809d1de8ef8552b25534571fe1d12",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/trees/546e2115fbe809d1de8ef8552b25534571fe1d12"
+      },
+      "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/commits/0ade01eac97b8edf3d78cc9399b6da14edf53115",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/0ade01eac97b8edf3d78cc9399b6da14edf53115",
+    "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/0ade01eac97b8edf3d78cc9399b6da14edf53115",
+    "comments_url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/0ade01eac97b8edf3d78cc9399b6da14edf53115/comments",
+    "author": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "754938436b65fe887208325876bf7103f1af4974",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/754938436b65fe887208325876bf7103f1af4974",
+        "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/754938436b65fe887208325876bf7103f1af4974"
+      }
+    ]
+  },
+  {
+    "sha": "754938436b65fe887208325876bf7103f1af4974",
+    "node_id": "MDY6Q29tbWl0MzMzNDQ4Mzg0Ojc1NDkzODQzNmI2NWZlODg3MjA4MzI1ODc2YmY3MTAzZjFhZjQ5NzQ=",
+    "commit": {
+      "author": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-28T14:31:23Z"
+      },
+      "committer": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-28T14:31:23Z"
+      },
+      "message": "download and configure condor tarballs",
+      "tree": {
+        "sha": "f0a38de60eebae90b9e90c9fb153748664d766b5",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/trees/f0a38de60eebae90b9e90c9fb153748664d766b5"
+      },
+      "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/commits/754938436b65fe887208325876bf7103f1af4974",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/754938436b65fe887208325876bf7103f1af4974",
+    "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/754938436b65fe887208325876bf7103f1af4974",
+    "comments_url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/754938436b65fe887208325876bf7103f1af4974/comments",
+    "author": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3831c3abc0319947f847d30404e4bb24b5296f08",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/3831c3abc0319947f847d30404e4bb24b5296f08",
+        "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/3831c3abc0319947f847d30404e4bb24b5296f08"
+      }
+    ]
+  },
+  {
+    "sha": "3831c3abc0319947f847d30404e4bb24b5296f08",
+    "node_id": "MDY6Q29tbWl0MzMzNDQ4Mzg0OjM4MzFjM2FiYzAzMTk5NDdmODQ3ZDMwNDA0ZTRiYjI0YjUyOTZmMDg=",
+    "commit": {
+      "author": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-27T20:09:32Z"
+      },
+      "committer": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-27T20:09:32Z"
+      },
+      "message": "playbooks import each other now, better structure",
+      "tree": {
+        "sha": "1568c74130d44cb5e945f26aacbe845dbcbf35f1",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/trees/1568c74130d44cb5e945f26aacbe845dbcbf35f1"
+      },
+      "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/commits/3831c3abc0319947f847d30404e4bb24b5296f08",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/3831c3abc0319947f847d30404e4bb24b5296f08",
+    "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/3831c3abc0319947f847d30404e4bb24b5296f08",
+    "comments_url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/3831c3abc0319947f847d30404e4bb24b5296f08/comments",
+    "author": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f58a9034b98a277fe2b2721c8f33e00b00348050",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/f58a9034b98a277fe2b2721c8f33e00b00348050",
+        "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/f58a9034b98a277fe2b2721c8f33e00b00348050"
+      }
+    ]
+  },
+  {
+    "sha": "f58a9034b98a277fe2b2721c8f33e00b00348050",
+    "node_id": "MDY6Q29tbWl0MzMzNDQ4Mzg0OmY1OGE5MDM0Yjk4YTI3N2ZlMmIyNzIxYzhmMzNlMDBiMDAzNDgwNTA=",
+    "commit": {
+      "author": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-27T17:47:44Z"
+      },
+      "committer": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-27T17:47:44Z"
+      },
+      "message": "moved README to more appropriate place",
+      "tree": {
+        "sha": "e4ba08c4be74a7e159c37ed35198ca21a53e06b0",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/trees/e4ba08c4be74a7e159c37ed35198ca21a53e06b0"
+      },
+      "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/commits/f58a9034b98a277fe2b2721c8f33e00b00348050",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/f58a9034b98a277fe2b2721c8f33e00b00348050",
+    "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/f58a9034b98a277fe2b2721c8f33e00b00348050",
+    "comments_url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/f58a9034b98a277fe2b2721c8f33e00b00348050/comments",
+    "author": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "26f67f30f771564a8184cf0c32e362cd80905b06",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/26f67f30f771564a8184cf0c32e362cd80905b06",
+        "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/26f67f30f771564a8184cf0c32e362cd80905b06"
+      }
+    ]
+  },
+  {
+    "sha": "26f67f30f771564a8184cf0c32e362cd80905b06",
+    "node_id": "MDY6Q29tbWl0MzMzNDQ4Mzg0OjI2ZjY3ZjMwZjc3MTU2NGE4MTg0Y2YwYzMyZTM2MmNkODA5MDViMDY=",
+    "commit": {
+      "author": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-27T17:04:28Z"
+      },
+      "committer": {
+        "name": "Dennis Box",
+        "email": "dbox@fnal.gov",
+        "date": "2021-01-27T17:04:28Z"
+      },
+      "message": "first code commit to this repo",
+      "tree": {
+        "sha": "7b0baaf952f1fe630fed8038d0d984b68a0c787c",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/trees/7b0baaf952f1fe630fed8038d0d984b68a0c787c"
+      },
+      "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/git/commits/26f67f30f771564a8184cf0c32e362cd80905b06",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/26f67f30f771564a8184cf0c32e362cd80905b06",
+    "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/26f67f30f771564a8184cf0c32e362cd80905b06",
+    "comments_url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/26f67f30f771564a8184cf0c32e362cd80905b06/comments",
+    "author": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "ddbox",
+      "id": 10133468,
+      "node_id": "MDQ6VXNlcjEwMTMzNDY4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10133468?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ddbox",
+      "html_url": "https://github.com/ddbox",
+      "followers_url": "https://api.github.com/users/ddbox/followers",
+      "following_url": "https://api.github.com/users/ddbox/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ddbox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ddbox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ddbox/subscriptions",
+      "organizations_url": "https://api.github.com/users/ddbox/orgs",
+      "repos_url": "https://api.github.com/users/ddbox/repos",
+      "events_url": "https://api.github.com/users/ddbox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ddbox/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "91abca920787f410b891c4c6a93df5ec947e87f1",
+        "url": "https://api.github.com/repos/ddbox/fermicloud-helpers/commits/91abca920787f410b891c4c6a93df5ec947e87f1",
+        "html_url": "https://github.com/ddbox/fermicloud-helpers/commit/91abca920787f410b891c4c6a93df5ec947e87f1"
+      }
+    ]
+  }
+]

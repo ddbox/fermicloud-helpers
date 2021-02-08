@@ -1,0 +1,68 @@
+{
+  "glidein": {
+    "entries": {
+      "entry": {
+        "name": "__ENTRY_NAME_",
+        "auth_method": "grid_proxy",
+        "enabled": true,
+        "gatekeeper": "__CE_FQDN__ __CE_FQDN__:9619",
+        "gridtype": "condor",
+        "rsl": "(queue=default)(jobtype=single)",
+        "schedd_name": "fermicloud173.fnal.gov",
+        "trust_domain": "OSG",
+        "verbosity": "fast",
+        "work_dir": "OSG",
+        "config": {
+          "max_jobs": {
+            "default_per_frontend": {
+              "glideins": 5000,
+              "held": 50,
+              "idle": 100
+            },
+            "per_entry": {
+              "glideins": 10000,
+              "held": 1000,
+              "idle": 2000
+            },
+            "per_frontends": null
+          },
+          "release": {
+            "max_per_cycle": 20,
+            "sleep": 0.2
+          },
+          "remove": {
+            "max_per_cycle": 5,
+            "sleep": 0.2
+          },
+          "restrictions": {
+            "require_glidein_glexec_use": false,
+            "require_voms_proxy": false
+          },
+          "submit": {
+            "cluster_size": 10,
+            "max_per_cycle": 100,
+            "sleep": 0.2,
+            "slots_layout": "fixed",
+            "submit_attrs": null
+          }
+        },
+        "allow_frontends": null,
+        "attrs": {
+          "attr": {
+            "name": "USE_CCB",
+            "const": true,
+            "glidein_publish": true,
+            "job_publish": false,
+            "parameter": true,
+            "publish": true,
+            "type": "string",
+            "value": true
+          }
+        },
+        "files": null,
+        "infosys_refs": null,
+        "monitorgroups": null
+      }
+    }
+  }
+}

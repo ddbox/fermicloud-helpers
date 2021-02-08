@@ -1,0 +1,117 @@
+---
+glidein:
+  entries:
+    entry:
+      name: __ENTRY_NAME_ # Attribute
+      auth_method: grid_proxy # Attribute
+      enabled: True # Attribute
+      gatekeeper: __CE_FQDN__ __CE_FQDN__:9619 # Attribute
+      gridtype: condor # Attribute
+      rsl: (queue=default)(jobtype=single) # Attribute
+      schedd_name: fermicloud173.fnal.gov # Attribute
+      trust_domain: OSG # Attribute
+      verbosity: fast # Attribute
+      work_dir: OSG # Attribute
+      config:
+        max_jobs:
+          default_per_frontend:
+            glideins: 5000 # Attribute
+            held: 50 # Attribute
+            idle: 100 # Attribute
+          per_entry:
+            glideins: 10000 # Attribute
+            held: 1000 # Attribute
+            idle: 2000 # Attribute
+          per_frontends:
+        release:
+          max_per_cycle: 20 # Attribute
+          sleep: 0.2 # Attribute
+        remove:
+          max_per_cycle: 5 # Attribute
+          sleep: 0.2 # Attribute
+        restrictions:
+          require_glidein_glexec_use: False # Attribute
+          require_voms_proxy: False # Attribute
+        submit:
+          cluster_size: 10 # Attribute
+          max_per_cycle: 100 # Attribute
+          sleep: 0.2 # Attribute
+          slots_layout: fixed # Attribute
+          submit_attrs:
+      allow_frontends:
+      attrs:
+        attr:
+          name: CONDOR_ARCH # Attribute
+          const: False # Attribute
+          glidein_publish: False # Attribute
+          job_publish: False # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: __CONDOR_ARCH__ # Attribute
+        attr:
+          name: CONDOR_OS # Attribute
+          const: False # Attribute
+          glidein_publish: False # Attribute
+          job_publish: False # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: __CONDOR_OS__ # Attribute
+        attr:
+          name: CONDOR_VERSION # Attribute
+          const: False # Attribute
+          glidein_publish: False # Attribute
+          job_publish: False # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: __CONDOR_VERSION__ # Attribute
+        attr:
+          name: GLIDEIN_SINGULARITY_REQUIRE # Attribute
+          const: True # Attribute
+          glidein_publish: True # Attribute
+          job_publish: True # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: PREFERRED # Attribute
+        attr:
+          name: SINGULARITY_BIN # Attribute
+          const: True # Attribute
+          glidein_publish: True # Attribute
+          job_publish: True # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: /usr/bin # Attribute
+        attr:
+          name: GLIDEIN_Site # Attribute
+          const: True # Attribute
+          glidein_publish: True # Attribute
+          job_publish: True # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: __ENTRY_NAME_ # Attribute
+        attr:
+          name: GLIDEIN_Supported_VOs # Attribute
+          const: True # Attribute
+          glidein_publish: True # Attribute
+          job_publish: True # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: OSG # Attribute
+        attr:
+          name: USE_CCB # Attribute
+          const: True # Attribute
+          glidein_publish: True # Attribute
+          job_publish: False # Attribute
+          parameter: True # Attribute
+          publish: True # Attribute
+          type: string # Attribute
+          value: True # Attribute
+      files:
+      infosys_refs:
+      monitorgroups:
