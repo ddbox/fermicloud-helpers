@@ -2,6 +2,7 @@ class osg_htcondor_ce::packages {
 
     package { 'osg-ce-condor' :
       ensure => 'present',
+      install_options => ['--enablerepo', 'osg-upcoming-development'],
     }
     package{ 'osg-wn-client' :
       ensure => 'present',

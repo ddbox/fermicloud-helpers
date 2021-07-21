@@ -1,0 +1,24 @@
+---
+  - name: gwms factory config files install
+    hosts: all
+    remote_user: root
+    vars:
+
+    tasks:
+
+    - name: create gwms config.d directory 
+      file:
+        path: /etc/gwms-factory/config.d
+        state: directory
+        mode: "u=rwx,g=rx,o=rx"
+        owner: "gfactory"
+        group: "gfactory"
+
+    - name: condor_tarball_file
+      copy:
+        src: templates/Condor_Tarballs.xml
+        dest: /etc/gwms-factory/config.d/Condor_Tarballs.xml
+        mode: "u=rw,g=r,o=r"
+        owner: "gfactory"
+        group: "gfactory"
+...

@@ -1,0 +1,6 @@
+dbox-frontend  ansible_ssh_host=fermicloud481.fnal.gov
+fermicloud481.fnal.gov
+dbox-factory  ansible_ssh_host=fermicloud466.fnal.gov
+fermicloud466.fnal.gov
+dbox-ce-5 ansible_ssh_host=fermicloud528.fnal.gov
+fermicloud528.fnal.gov

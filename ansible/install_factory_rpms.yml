@@ -18,6 +18,22 @@
           state:
               present
 
+    - name: install boost169-devel
+      yum:
+          name: boost169-devel
+          enablerepo: "epel"
+
+    - name: install munge-devel
+      yum:
+          name: munge-devel
+          enablerepo: "epel"
+
+    - name: install condor
+      yum:
+          name: condor
+          enablerepo: "{{osg_repo}}"
+          disablerepo: "epel"
+
     - name: install factory
       yum:
           name: glideinwms-factory

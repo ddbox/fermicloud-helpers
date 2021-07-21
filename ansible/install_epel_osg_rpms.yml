@@ -1,5 +1,5 @@
 ---
-  - name: install epel, osg rpms
+  - name: install_epel_osg_rpms.yml
     hosts: all
     remote_user: root
     vars:

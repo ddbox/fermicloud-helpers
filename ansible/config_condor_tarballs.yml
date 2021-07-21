@@ -1,12 +1,12 @@
 ---
-  - name: condor tarball stuff
+  - name: config_condor_tarballs.yml
     hosts: all
     # debugger: on_failed
     remote_user: root
     vars:
-        condor_arch: x86_64
-        condor_os: CentOS7
-        condor_rel: 8.8.12
+        condor_arch: "x86_64"
+        condor_os: "CentOS7"
+        condor_rel: "8.8.12"
         #condor_srel is 8.8 if condor_rel is 8.8.12
         condor_srel: "{{condor_rel | regex_replace('^([^.]*).([^.]*).*', '\\1.\\2') }}"
         condor_basedir: "condor-{{condor_rel}}-{{condor_arch}}_{{condor_os}}-stripped"
@@ -31,7 +31,7 @@
         ansible.builtin.lineinfile:
           path: /etc/gwms-factory/config.d/Condor_Tarballs.xml
           insertbefore: '</condor_tarballs>' 
-          line: '       <condor_tarball arch="{{condor_arch}}" base_dir="/var/lib/gwms-factory/{{condor_basedir}}" os="{{condor_os}}" version="{{condor_rel}}"/>'
+          line: '       <condor_tarball arch="{{condor_arch}}" base_dir="/var/lib/gwms-factory/condor/{{condor_basedir}}" os="{{condor_os}}" version="{{condor_rel}}"/>'
 
 
 ...

@@ -1,0 +1,39 @@
+scitoken-credmon-demo  ansible_ssh_host=fermicloud176.fnal.gov
+fermicloud176.fnal.gov
+jobsub_sl7_dev  ansible_ssh_host=fermicloud184.fnal.gov
+fermicloud184.fnal.gov
+htcondor_ce_el7_osg35  ansible_ssh_host=fermicloud127.fnal.gov
+fermicloud127.fnal.gov
+htcondor_ce_el7_osg34  ansible_ssh_host=fermicloud378.fnal.gov
+fermicloud378.fnal.gov
+vault_demo  ansible_ssh_host=fermicloud050.fnal.gov
+fermicloud050.fnal.gov
+htcondor_ce_osg35  ansible_ssh_host=fermicloud081.fnal.gov
+fermicloud081.fnal.gov
+htcondor_ce_osg34  ansible_ssh_host=fermicloud092.fnal.gov
+fermicloud092.fnal.gov
+fact-el7-rpm-test  ansible_ssh_host=fermicloud044.fnal.gov
+fermicloud044.fnal.gov
+vofe-el7-rpm-test  ansible_ssh_host=fermicloud043.fnal.gov
+fermicloud043.fnal.gov
+fact-el7-rpm-test  ansible_ssh_host=fermicloud045.fnal.gov
+fermicloud045.fnal.gov
+vofe-el7-rpm-test  ansible_ssh_host=fermicloud040.fnal.gov
+fermicloud040.fnal.gov
+fact-el7-rpm-test  ansible_ssh_host=fermicloud114.fnal.gov
+fermicloud114.fnal.gov
+vofe-el7-rpm-test  ansible_ssh_host=fermicloud159.fnal.gov
+fermicloud159.fnal.gov
+fact-el7-rpm-test  ansible_ssh_host=fermicloud119.fnal.gov
+fermicloud119.fnal.gov
+vofe-el7-rpm-test  ansible_ssh_host=fermicloud179.fnal.gov
+fermicloud179.fnal.gov
+fermicloud446.fnal.gov
+fermicloud081.fnal.gov
+fermicloud092.fnal.gov
+fermicloud359.fnal.gov
+fermicloud360.fnal.gov
+fermicloud123.fnal.gov
+fermicloud118.fnal.gov
+fermicloud123.fnal.gov
+fermicloud001.fnal.gov

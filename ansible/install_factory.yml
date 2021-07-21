@@ -6,7 +6,7 @@
         osg_rel: 3.5
         osg_repo: "osg"
         os_major: 7
-        vofrontend_fqdn: "fermicloud001.fnal.gov"
+        vofrontend_fqdn: "fermicloud481.fnal.gov"
 
     tasks:
 
@@ -20,8 +20,8 @@
     import_playbook: install_factory_config_files.yml
 
   - name: config_condor_tarballs
-    import_playbook: config_condor_tarballs.yml -e condor_rel=8.8.12
+    import_playbook: config_condor_tarballs.yml -e condor_rel=8.9.11
 
   - name: config_condor_tarballs
-    import_playbook: config_condor_tarballs.yml -e condor_rel=8.9.11
+    import_playbook: config_condor_tarballs.yml -e condor_rel=9.0.2
 ...
