@@ -1,0 +1,43 @@
+---
+  - name: install_epel_osg_rpms.yml
+    hosts: all
+    remote_user: root
+    vars:
+    tasks:
+
+    - name: read hostnames  
+      include_vars:
+        file: gwms_vars.yml
+        name: gwms
+    - name: set_values
+      set_fact:
+        fact_dn: "{{gwms.dn_str}}{{gwms.fact_fqdn}}"
+        vofe_dn: "{{gwms.dn_str}}{{gwms.vofe_fqdn}}"
+        ce_dn: "{{gwms.dn_str}}{{gwms.ce_fqdn}}"
+
+
+    - name: edit frontend.xml
+      ansible.builtin.replace:
+        path: /etc/gwms-frontend/frontend.xml
+        regexp: '__VOCOLLECTOR_FQDN__'
+        replace: '{{gwms.vofe_fqdn}}'
+
+    - name: edit frontend.xml 2
+      ansible.builtin.replace:
+        path: /etc/gwms-frontend/frontend.xml
+        regexp: '__VOCOLLECTOR_DN__'
+        replace: '{{vofe_dn}}'
+
+    - name: edit frontend.xml 3
+      ansible.builtin.replace:
+        path: /etc/gwms-frontend/frontend.xml
+        regexp: '__WMSCOLLECTOR_FQDN__'
+        replace: '{{gwms.fact_fqdn}}'
+
+    - name: edit frontend.xml 4
+      ansible.builtin.replace:
+        path: /etc/gwms-frontend/frontend.xml
+        regexp: '__WMSCOLLECTOR_DN__'
+        replace: '{{fact_dn}}'
+
+...

@@ -1,0 +1,9 @@
+---
+fact_fqdn: fermicloud506.fnal.gov
+vofe_fqdn: fermicloud551.fnal.gov 
+ce_fqdn: fermicloud528.fnal.gov
+condor_arch: x86_64
+condor_os: CentOS7
+dn_str: /DC=org/DC=incommon/C=US/ST=Illinois/L=Batavia/O=Fermi Research Alliance/OU=Fermilab/CN=
+
+
