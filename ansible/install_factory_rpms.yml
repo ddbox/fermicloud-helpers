@@ -10,23 +10,24 @@
         osg_url: "https://repo.opensciencegrid.org/osg/{{osg_rel}}/osg-{{osg_rel}}-el{{os_major}}-release-latest.rpm"
     tasks:
 
-    - name: install osg stuff
+    - name: install prereq packages 
       yum:
           name:
               - yum-priorities
               - osg-ca-certs
+              - globus-rsl-devel
+              - globus-gsi-sysconfig-devel
+              - globus-gsi-callback-devel
+              - globus-gss-assist-devel
+              - globus-xio-gsi-driver
+              - globus-gssapi-error
+              - globus-io-devel
+              - globus-ftp-client-devel
+              - boost169-devel
+              - munge-devel
           state:
               present
 
-    - name: install boost169-devel
-      yum:
-          name: boost169-devel
-          enablerepo: "epel"
-
-    - name: install munge-devel
-      yum:
-          name: munge-devel
-          enablerepo: "epel"
 
     - name: install condor
       yum:

@@ -18,4 +18,9 @@
   - name: install_frontend_rpms.yml
     import_playbook: install_frontend_rpms.yml
 
+  - name: install_frontend_config_files.yml
+    import_playbook: install_frontend_config_files.yml
+
+  - name: config_frontend_files.yml
+    import_playbook: config_frontend_files.yml
 ...

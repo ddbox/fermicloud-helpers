@@ -23,7 +23,7 @@
 
       - name: "untar {{condor_tarball}}"
         shell: |
-          /usr/bin/tar -C /var/lib/gwms-factory/condor/ -x -z  -f /var/lib/gwms-factory/condor/{{condor_tarball}}
+          mkdir -p /var/lib/gwms-factory/condor/{{condor_basedir}} && /usr/bin/tar -C /var/lib/gwms-factory/condor/{{condor_basedir}} --strip-components 1  -x -z  -f /var/lib/gwms-factory/condor/{{condor_tarball}}
         args:
           warn: false
 
@@ -31,7 +31,7 @@
         ansible.builtin.lineinfile:
           path: /etc/gwms-factory/config.d/Condor_Tarballs.xml
           insertbefore: '</condor_tarballs>' 
-          line: '       <condor_tarball arch="{{condor_arch}}" base_dir="/var/lib/gwms-factory/condor/{{condor_basedir}}" os="{{condor_os}}" version="{{condor_rel}}"/>'
+          line: '     <condor_tarball arch="{{condor_arch}}" base_dir="/var/lib/gwms-factory/condor/{{condor_basedir}}" os="{{condor_os}}" version="{{condor_rel}}"/>'
 
 
 ...

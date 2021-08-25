@@ -24,4 +24,7 @@
 
   - name: config_condor_tarballs
     import_playbook: config_condor_tarballs.yml -e condor_rel=9.0.2
+
+  - name: config glideinWMS.xml
+    import_playbook: config_factory_files.yml 
 ...

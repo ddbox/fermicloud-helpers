@@ -1,5 +1,5 @@
 ---
-  - name: config_frontend_files.yml
+  - name: config_factory_files.yml
     hosts: all
     remote_user: root
     vars:
@@ -9,7 +9,6 @@
       include_vars:
         file: gwms_vars.yml
         name: gwms
-
     - name: set_dn_values
       set_fact:
         fact_fqdn: "{{gwms.fact_node}}{{gwms.ext}}"
@@ -20,39 +19,45 @@
         ce_dn: "{{gwms.dn_str}}{{gwms.ce_node}}{{gwms.ext}}"
 
 
-    - name: edit frontend.xml
+    - name: edit glideinWMS.xml
       ansible.builtin.replace:
-        path: /etc/gwms-frontend/frontend.xml
+        path: /etc/gwms-factory/glideinWMS.xml
         regexp: '__VOCOLLECTOR_FQDN__'
         replace: '{{vofe_fqdn}}'
 
-    - name: edit frontend.xml 2
+    - name: edit glideinWMS.xml 2
       ansible.builtin.replace:
-        path: /etc/gwms-frontend/frontend.xml
+        path: /etc/gwms-factory/glideinWMS.xml
         regexp: '__VOCOLLECTOR_DN__'
         replace: '{{vofe_dn}}'
 
-    - name: edit frontend.xml 3
+    - name: edit glideinWMS.xml 3
       ansible.builtin.replace:
-        path: /etc/gwms-frontend/frontend.xml
+        path: /etc/gwms-factory/glideinWMS.xml
         regexp: '__WMSCOLLECTOR_FQDN__'
         replace: '{{fact_fqdn}}'
 
-    - name: edit frontend.xml 4
+    - name: edit glideinWMS.xml 4
       ansible.builtin.replace:
-        path: /etc/gwms-frontend/frontend.xml
+        path: /etc/gwms-factory/glideinWMS.xml
         regexp: '__WMSCOLLECTOR_DN__'
         replace: '{{fact_dn}}'
 
-    - name: edit frontend.xml 5
+    - name: edit glideinWMS.xml 5
       ansible.builtin.replace:
-        path: /etc/gwms-frontend/frontend.xml
+        path: /etc/gwms-factory/glideinWMS.xml
+        regexp: '__CE_FQDN__'
+        replace: '{{ce_fqdn}}'
+
+    - name: edit glideinWMS.xml 6
+      ansible.builtin.replace:
+        path: /etc/gwms-factory/glideinWMS.xml
         regexp: '__WMSCOLLECTOR_NODE__'
         replace: '{{gwms.fact_node}}'
 
-    - name: edit frontend.xml 6
+    - name: edit glideinWMS.xml 7
       ansible.builtin.replace:
-        path: /etc/gwms-frontend/frontend.xml
+        path: /etc/gwms-factory/glideinWMS.xml
         regexp: '__VOCOLLECTOR_NODE__'
         replace: '{{gwms.vofe_node}}'
 

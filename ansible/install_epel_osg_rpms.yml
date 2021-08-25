@@ -16,4 +16,10 @@
     - name: install {{osg_url}}
       yum: name={{osg_url}}
 
+    - name: fix epel priorities
+      ansible.builtin.replace:
+        path: /etc/yum.repos.d/epel.repo
+        regexp: '^(priority=.+)$'
+        replace: 'priority=99'
+
 ...
