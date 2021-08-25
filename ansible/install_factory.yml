@@ -27,4 +27,10 @@
 
   - name: config glideinWMS.xml
     import_playbook: config_factory_files.yml 
+
+  - name: http_condor_start.yml
+    import_playbook: http_condor_start.yml
+
+  - name: upgrade gwms-factory
+    import_playbook: gwms_reconfig.yml -e service=gwms-factory
 ...

@@ -1,0 +1,47 @@
+---
+
+- name: enable, stop, upgrade, start gwms service
+  hosts: all
+  become: true
+  vars:
+    service: gwms-frontend
+      
+
+  tasks:
+
+
+
+    - name: Enable the "{{ service }}" daemon in systemd
+      systemd:
+        name: "{{ service }}"
+        enabled: yes
+        masked: no
+
+    - name: "edit /etc/systemd/system/multi-user.target.wants/{{service}}.service"
+      ansible.builtin.replace:
+        path: "/etc/systemd/system/multi-user.target.wants/{{service}}.service"
+        regexp: '--check_35_ready'
+        replace: ''
+
+    - name: daemon-reload after editing systemd service
+      shell: |
+          systemctl daemon-reload
+
+    - name: Stop "{{ service }}" for reconfig 
+      systemd:
+        name: "{{ service }}"
+        state: stopped
+        masked: no
+
+    - name: upgrade "{{ service }}"
+      shell : |
+          "{{ service }}" upgrade
+
+    - name: Start "{{ service }}"
+      systemd:
+        name: "{{ service }}"
+        state: started
+        masked: no
+
+
+

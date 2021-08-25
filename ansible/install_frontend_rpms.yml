@@ -22,4 +22,11 @@
       yum:
           name: glideinwms-vofrontend
           enablerepo: "{{osg_repo}}"
+
+    - name: create testuser
+      ansible.builtin.user:
+        name: testuser
+        shell: /bin/bash
+        create_home: True 
+
 ...

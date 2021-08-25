@@ -23,4 +23,10 @@
 
   - name: config_frontend_files.yml
     import_playbook: config_frontend_files.yml
+
+  - name: http_condor_start.yml
+    import_playbook: http_condor_start.yml
+
+  - name: upgrade gwms-frontend
+    import_playbook: gwms_reconfig.yml -e service=gwms-frontend
 ...

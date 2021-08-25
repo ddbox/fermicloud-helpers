@@ -1,0 +1,36 @@
+---
+
+- name: Start httpd, condor
+  hosts: all
+  become: true
+
+  tasks:
+
+
+
+    - name: Enable the httpd daemon in systemd
+      systemd:
+        name: httpd
+        enabled: yes
+        masked: no
+
+    - name: Start the httpd daemon
+      systemd:
+        name: httpd
+        state: started
+        masked: no
+
+    - name: Enable the condor daemon in systemd
+      systemd:
+        name: condor
+        enabled: yes
+        masked: no
+
+    - name: Start the condor daemon
+      systemd:
+        name: httpd
+        state: started
+        masked: no
+
+
+

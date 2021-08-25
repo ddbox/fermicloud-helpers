@@ -30,4 +30,12 @@
         mode: "u=rw,g=r,o=r"
         owner: "gfactory"
         group: "gfactory"
+
+    - name: dev_site_entry_file
+      copy:
+        src: templates/site_template.xml
+        dest: /etc/gwms-factory/config.d/Site_Entry.xml
+        mode: "u=rw,g=r,o=r"
+        owner: "gfactory"
+        group: "gfactory"
 ...

@@ -1,0 +1,32 @@
+---
+  - name: gwms frontend config files install
+    hosts: all
+    remote_user: root
+    vars:
+
+    tasks:
+
+    - name: install frontend.xml
+      copy:
+        src: templates/frontend.xml
+        dest: /etc/gwms-frontend/frontend.xml
+        mode: "u=rw,g=r,o=r"
+        owner: "frontend"
+        group: "frontend"
+
+    - name: install default_singularity_wrapper.sh
+      copy:
+        src: templates/default_singularity_wrapper.sh
+        dest: /var/lib/gwms-frontend/web-base/frontend/default_singularity_wrapper.sh
+        mode: "u=rw,g=r,o=r"
+        owner: "frontend"
+        group: "frontend"
+
+    - name: install generic_pre_singularity_setup.sh
+      copy:
+        src: templates/generic_pre_singularity_setup.sh
+        dest: /var/lib/gwms-frontend/web-base/frontend/generic_pre_singularity_setup.sh
+        mode: "u=rw,g=r,o=r"
+        owner: "frontend"
+        group: "frontend"
+...

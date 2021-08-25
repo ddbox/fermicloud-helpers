@@ -1,6 +1,6 @@
 ---
-fact_node: fermicloud558
-vofe_node: fermicloud545
+fact_node: fermicloud506
+vofe_node: fermicloud551
 ce_node: fermicloud528
 ext: .fnal.gov
 condor_arch: x86_64

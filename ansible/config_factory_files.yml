@@ -71,12 +71,42 @@
       ansible.builtin.lineinfile:
         path: /etc/condor/certs/condor_mapfile
         insertbefore: 'GSI (.*) anonymous' 
-        line: 'GSI "{{vofe_dn}}" vofrontend'
+        line: 'GSI "{{vofe_dn}}" frontend-{{gwms.vofe_node}}'
 
     - name: "add info to map_file 3"
       ansible.builtin.lineinfile:
         path: /etc/condor/certs/condor_mapfile
         insertbefore: 'GSI (.*) anonymous' 
         line: 'GSI "{{ce_dn}}" compute_element'
+
+    - name: "edit /etc/gwms-factory/config.d/Site_Entry.xml 1"
+      ansible.builtin.replace:
+        path: /etc/gwms-factory/config.d/Site_Entry.xml
+        regexp: '__ENTRY_NAME__'
+        replace: 'ce_{{gwms.ce_node}}'
+
+    - name: "edit /etc/gwms-factory/config.d/Site_Entry.xml 2"
+      ansible.builtin.replace:
+        path: /etc/gwms-factory/config.d/Site_Entry.xml
+        regexp: '__CE_FQDN__'
+        replace: '{{ce_fqdn}}'
+
+    - name: "edit /etc/gwms-factory/config.d/Site_Entry.xml 3"
+      ansible.builtin.replace:
+        path: /etc/gwms-factory/config.d/Site_Entry.xml
+        regexp: '__CONDOR_ARCH__'
+        replace: '{{gwms.condor_arch}}'
+
+    - name: "edit /etc/gwms-factory/config.d/Site_Entry.xml 4"
+      ansible.builtin.replace:
+        path: /etc/gwms-factory/config.d/Site_Entry.xml
+        regexp: '__CONDOR_OS__'
+        replace: '{{gwms.condor_os}}'
+
+    - name: "edit /etc/gwms-factory/config.d/Site_Entry.xml 4"
+      ansible.builtin.replace:
+        path: /etc/gwms-factory/config.d/Site_Entry.xml
+        regexp: '__CONDOR_VERSION__'
+        replace: '9.0.2'
 
 ...

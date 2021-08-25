@@ -1,6 +1,6 @@
 ---
   - name: check frontend health playbook
-    hosts: frontends
+    hosts: all
     remote_user: root
     tasks:
 
