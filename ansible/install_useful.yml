@@ -1,0 +1,33 @@
+---
+  - name: useful files for condor/token stuff
+    hosts: all
+    remote_user: root
+    vars:
+
+    tasks:
+
+    - name: install decode_jwt
+      copy:
+        src: templates/decode_jwt
+        dest: /usr/local/bin
+        mode: "u=rwx,g=rx,o=rx"
+        owner: "root"
+        group: "root"
+
+
+    - name: install decode_jwt_human
+      copy:
+        src: templates/decode_jwt
+        dest: /usr/local/bin
+        mode: "u=rwx,g=rx,o=rx"
+        owner: "root"
+        group: "root"
+
+    - name: root .bashrc with condor_authtable
+      copy:
+        src: templates/bashrc.root
+        dest: /root/.bashrc
+        mode: "u=rwx,g=rx,o=rx"
+        owner: "root"
+        group: "root"
+...

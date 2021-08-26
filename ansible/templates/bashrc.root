@@ -1,0 +1,16 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+condor_authtable(){ condor_ping -addr "<$(host $1 | sed -e 's/.* //'):9618>" -table ALL; }
+condor_authstatus(){ condor_status -any -af mytype name authenticatedidentity authenticationmethod; }
+
+

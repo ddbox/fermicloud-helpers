@@ -33,4 +33,7 @@
 
   - name: upgrade gwms-factory
     import_playbook: gwms_reconfig.yml -e service=gwms-factory
+  
+  - name: install some helpful utilities
+    import_playbook: install_useful.yml
 ...

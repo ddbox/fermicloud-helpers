@@ -12,7 +12,7 @@
    <monitor_footer display_txt="" href_link=""/>
    <security key_length="2048" pub_key="RSA" remove_old_cred_age="30" remove_old_cred_freq="24" reuse_oldkey_onstartup_gracetime="900">
       <frontends>
-         <frontend name="vofrontend-__VOCOLLECTOR_NODE__" identity="vofrontend-__VOCOLLECTOR_NODE__@__WMSCOLLECTOR_FQDN__">
+         <frontend name="frontend-__VOCOLLECTOR_NODE__" identity="frontend-__VOCOLLECTOR_NODE__@__WMSCOLLECTOR_FQDN__">
             <security_classes>
                <security_class name="frontend" username="frontend"/>
             </security_classes>

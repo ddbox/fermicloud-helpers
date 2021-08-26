@@ -20,7 +20,7 @@
          <match_attrs>
          </match_attrs>
          <collectors>
-            <collector DN="__WMSCOLLECTOR_DN__" comment="Define factory collectors globally for simplicity" factory_identity="gfactory@__WMSCOLLECTOR_FQDN__" my_identity="vofrontend-__VOCOLLECTOR_NODE__@__WMSCOLLECTOR_FQDN__" node="__WMSCOLLECTOR_FQDN__"/>
+            <collector DN="__WMSCOLLECTOR_DN__" comment="Define factory collectors globally for simplicity" factory_identity="gfactory@__WMSCOLLECTOR_FQDN__" my_identity="frontend-__VOCOLLECTOR_NODE__@__WMSCOLLECTOR_FQDN__" node="__WMSCOLLECTOR_FQDN__"/>
          </collectors>
       </factory>
       <job comment="Define job constraint and schedds globally for simplicity" query_expr="(JobUniverse==5)&amp;&amp;(GLIDEIN_Is_Monitor =!= TRUE)&amp;&amp;(JOB_Is_Monitor =!= TRUE)">

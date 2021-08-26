@@ -29,4 +29,8 @@
 
   - name: upgrade gwms-frontend
     import_playbook: gwms_reconfig.yml -e service=gwms-frontend
+
+  - name: install some helpful utilities
+    import_playbook: install_useful.yml
+
 ...
