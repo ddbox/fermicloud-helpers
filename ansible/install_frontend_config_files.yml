@@ -29,4 +29,22 @@
         mode: "u=rw,g=r,o=r"
         owner: "frontend"
         group: "frontend"
+
+    - name: install proxy generating script 
+      copy:
+        src: templates/make-proxies.sh
+        dest: /root/make-proxies.sh
+        mode: "u=rwx,g=rx,o=r"
+        owner: "root"
+        group: "root"
+
+    - name: run proxy generating script
+      shell: |
+          /root/make-proxies.sh
+    - name: copy testuser condor jdf
+      copy:
+          src: templates/testjobs
+          dest: /home/testuser
+          owner: "testuser"
+          group: "testuser"
 ...
