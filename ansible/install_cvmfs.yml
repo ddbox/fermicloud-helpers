@@ -1,0 +1,45 @@
+---
+
+- name: Install cvmfs
+  hosts: all
+  become: true
+
+  tasks:
+
+    - name: install autofs
+      yum:
+        name:
+          - autofs
+        state:
+          present
+
+    - name: start autofs
+      systemd:
+        name: autofs
+        state: restarted
+
+    - name: install cvmfs
+      yum:
+        name:
+          - cvmfs
+        state:
+          present
+      
+    - name: install cvmfs-config-osg
+      yum:
+        name:
+          - cvmfs-config-osg
+        state:
+          present
+
+
+    - name: install cvmfs config file
+      copy:
+        src: templates/etc.cvmfs.default.local
+        dest: /etc/cvmfs/default.local
+
+    - name: start cvmfs
+      shell:  |
+          /usr/bin/cvmfs_config setup
+
+...

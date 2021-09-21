@@ -1,16 +1,17 @@
 ---
-  - name: frontend playbook
-    hosts: frontends
+  - name: refresh frontend playbook
+    hosts: all
     remote_user: root
     tasks:
     - name: refresh proxy
       shell: |
-         cp /tmp/nova_proxy /tmp/vo_proxy
-         chown frontend /tmp/vo_proxy
-         cp /tmp/nova_proxy /tmp/frontend_proxy
-         chown frontend /tmp/frontend_proxy
-         cp /tmp/nova_proxy /tmp/grid_proxy
-         chown testuser /tmp/grid_proxy
+          /root/make-proxies.sh
+
+    - name: bounce condor
+      service:
+          name: condor
+          enabled: yes
+          state: restarted
 
     - name: stop server
       service:

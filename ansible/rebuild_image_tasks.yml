@@ -1,0 +1,11 @@
+---
+
+ - name: rebuild server
+   shell:  |
+       source {{ tmpfile}};  openstack server  rebuild  {{ machine_instance }}  --os-endpoint http://131.225.153.227:8774/v2.1  --os-token $OS_TOKEN
+
+ - name: add security group   
+   shell:  |
+       source {{ tmpfile }}; openstack server add security group {{ machine_instance }} {{ security_group }} --os-endpoint http://131.225.153.227:8774/v2.1  --os-token $OS_TOKEN
+
+...

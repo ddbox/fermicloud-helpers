@@ -1,0 +1,17 @@
+---
+# openstack server   --os-endpoint http://131.225.153.227:8774/v2.1     --os-token $OS_TOKEN create --flavor cpu1_ram2GB_disk30GB   --image  sl7_small_nfs_v1  --wait dbox_api_test2
+#
+#
+ - name: create_server
+   shell:  |
+       source {{ tmpfile }}; openstack server  create  --os-endpoint http://131.225.153.227:8774/v2.1     --os-token $OS_TOKEN  --flavor cpu1_ram2GB_disk30GB   --image  sl7_small_nfs_v1   --wait -c addresses  -f value  {{ machine_instance }}
+   register: capture_output
+
+ - name: capture machine data
+   set_fact:
+       machine_data: "{{ capture_output.stdout }}"
+
+ - name: debug it
+   debug: 
+       msg: "{{ machine_data }}"
+...

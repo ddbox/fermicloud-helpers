@@ -1,0 +1,33 @@
+---
+
+
+      - name: mktemp_cmd 
+        shell:  |
+            mktemp /tmp/token_{{project}}_XXXXXXXXXX || exit 1
+        register: mktemp_output
+
+      - name: capture tmpfile2
+        set_fact:
+            tmpfile: "{{mktemp_output.stdout}}"
+
+      - name: populate tmpfile
+        ansible.builtin.lineinfile:
+            path: "{{tmpfile}}"
+            insertbefore: BOF
+            line: "export OS_PASSWORD=\"{{password}}\""
+      
+      - name: generate openstack token
+        shell:  |
+           source {{tmpfile}} ; echo $OS_PASSWORD | openstack --os-username {{username}}  --os-user-domain-name=services --os-project-domain-name=services --os-project-name {{project}}  --os-auth-url http://131.225.153.227:5000/v3  --os-system-scope all token issue --format json | jq -r '.id'
+        register: openstack_output
+
+      - name: capture token
+        set_fact:
+            openstack_token: "{{openstack_output.stdout}}"
+
+      - name: rewrite tmpfile
+        ansible.builtin.replace:
+            path: "{{tmpfile}}"
+            regexp: "export OS_PASSWORD=.*$"
+            replace: "export OS_TOKEN=\"{{openstack_output.stdout}}\""
+...

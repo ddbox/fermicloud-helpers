@@ -17,7 +17,7 @@
 
     - name: install decode_jwt_human
       copy:
-        src: templates/decode_jwt
+        src: templates/decode_jwt_human
         dest: /usr/local/bin
         mode: "u=rwx,g=rx,o=rx"
         owner: "root"

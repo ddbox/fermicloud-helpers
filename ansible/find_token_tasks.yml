@@ -1,0 +1,24 @@
+---
+
+      - name: whoami
+        set_fact:
+            username: "{{ lookup('env', 'USER') }}"
+
+      - name: cleanup expired tokens
+        shell: |
+            find /tmp -maxdepth 1 -type f -user {{ username }}  -cmin +30 -name 'token_*' -exec rm {} \;
+
+      - name: find valid  token
+        shell: |
+            find /tmp -maxdepth 1 -type f -user {{ username }}  -cmin -60 -name 'token_{{project}}_*'
+        register:
+            find_token
+
+      - name: capture tmpfile1
+        set_fact:
+            tmpfile: "{{find_token.stdout}}"
+
+      - name: capture tmpfile1
+        debug:
+            msg: "{{tmpfile}}"
+...

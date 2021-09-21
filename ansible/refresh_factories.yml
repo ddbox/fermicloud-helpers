@@ -1,6 +1,6 @@
 ---
   - name: factory playbook
-    hosts: factories
+    hosts: all
     remote_user: root
     tasks:
 

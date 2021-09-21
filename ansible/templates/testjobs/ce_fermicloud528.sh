@@ -26,6 +26,8 @@ echo "________________________________________________________________________"
 #echo "File Tx 	: `cat test.txt`" 
 #while [ 1 ]
 #do 
-    echo "sleeping"
-    sleep 1200
+sleepval=600
+test -n "$1" && sleepval=$1
+    echo "sleeping" $sleepval
+    sleep $sleepval
 #done
