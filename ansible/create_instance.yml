@@ -1,0 +1,23 @@
+---
+#                      --vault-password-file: ansible vault password to decrypt vault.yml
+#
+  - name: register_openstack.yml
+    hosts: all
+    gather_facts: no
+    vars:
+        project: "glideinwms"
+        machine_instance: "dbox_smoke_vofe"
+        flavor: "cpu1_ram2GB_disk30GB"
+        image:  "sl7_small_nfs_v1"
+
+    vars_files:
+      - vault_contents.yml
+
+    tasks:
+
+      - name: find token
+        import_tasks: find_token_tasks.yml
+
+      - name: create_instance
+        import_tasks: create_instance_tasks.yml
+...

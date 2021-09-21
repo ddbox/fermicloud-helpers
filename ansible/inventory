@@ -1,0 +1,206 @@
+fermicloud495.fnal.gov
+fermicloud588.fnal.gov
+fermicloud505.fnal.gov
+openstackuigpvm01.fnal.gov  ansible_ssh_user=dbox
+fermicloud579.fnal.gov
+fermicloud597.fnal.gov
+dbox-smoketest-factory ansible_ssh_host=fermicloud558.fnal.gov
+fermicloud558.fnal.gov
+dbox-smoketest-frontend ansible_ssh_host=fermicloud545.fnal.gov
+fermicloud545.fnal.gov
+dbox-smoketest-factory2 ansible_ssh_host=fermicloud506.fnal.gov
+fermicloud506.fnal.gov
+dbox-smoketest-frontend2 ansible_ssh_host=fermicloud551.fnal.gov
+fermicloud551.fnal.gov
+HTCondorCE_ET2 ansible_ssh_host=fermicloud488.fnal.gov
+fermicloud488.fnal.gov
+test_vm ansible_ssh_host=fermicloud556.fnal.gov
+fermicloud556.fnal.gov
+dwdhomesl7 ansible_ssh_host=fermicloud561.fnal.gov
+fermicloud561.fnal.gov
+RemoteSchedd2_FedIds ansible_ssh_host=fermicloud507.fnal.gov
+fermicloud507.fnal.gov
+Execute2_TestFedIds ansible_ssh_host=fermicloud585.fnal.gov
+fermicloud585.fnal.gov
+Submit2_TestFedIds ansible_ssh_host=fermicloud534.fnal.gov
+fermicloud534.fnal.gov
+CM2_TestFedIds ansible_ssh_host=fermicloud538.fnal.gov
+fermicloud538.fnal.gov
+dbox-frontend2 ansible_ssh_host=fermicloud529.fnal.gov
+fermicloud529.fnal.gov
+dbox-schedd ansible_ssh_host=fermicloud597.fnal.gov
+fermicloud597.fnal.gov
+mm-ce ansible_ssh_host=fermicloud577.fnal.gov
+fermicloud577.fnal.gov
+HTCondorCE_ET1 ansible_ssh_host=fermicloud493.fnal.gov
+fermicloud493.fnal.gov
+lisa_de2 ansible_ssh_host=fermicloud517.fnal.gov
+fermicloud517.fnal.gov
+ewv-cta ansible_ssh_host=fermicloud581.fnal.gov
+fermicloud581.fnal.gov
+coimbra-test-install ansible_ssh_host=fermicloud530.fnal.gov
+fermicloud530.fnal.gov
+mm-hepcloud-test2 ansible_ssh_host=fermicloud554.fnal.gov
+fermicloud554.fnal.gov
+coimbra-ce ansible_ssh_host=fermicloud489.fnal.gov
+fermicloud489.fnal.gov
+dwdosgdev ansible_ssh_host=dwdosgdev.fnal.gov
+dwdosgdev.fnal.gov
+dbox-jobsub-dev ansible_ssh_host=fermicloud595.fnal.gov
+fermicloud595.fnal.gov
+marcom-ce-fc025 ansible_ssh_host=fermicloud592.fnal.gov
+fermicloud592.fnal.gov
+leeza-devel ansible_ssh_host=fermicloud539.fnal.gov
+fermicloud539.fnal.gov
+dwdhas1a ansible_ssh_host=fermicloud569.fnal.gov
+fermicloud569.fnal.gov
+dwdhas1b ansible_ssh_host=fermicloud492.fnal.gov
+fermicloud492.fnal.gov
+dwdepeldev ansible_ssh_host=fermicloud549.fnal.gov
+fermicloud549.fnal.gov
+illingwodev ansible_ssh_host=fermicloud563.fnal.gov
+fermicloud563.fnal.gov
+dwdvaulttest ansible_ssh_host=fermicloud543.fnal.gov
+fermicloud543.fnal.gov
+kherner_dev ansible_ssh_host=fermicloud598.fnal.gov
+fermicloud598.fnal.gov
+kherner_dev ansible_ssh_host=fermicloud494.fnal.gov
+fermicloud494.fnal.gov
+dwdmyproxytest ansible_ssh_host=fermicloud591.fnal.gov
+fermicloud591.fnal.gov
+mmascher-dev-frontend ansible_ssh_host=fermicloud535.fnal.gov
+fermicloud535.fnal.gov
+summer-project-frontend ansible_ssh_host=fermicloud555.fnal.gov
+fermicloud555.fnal.gov
+mmascher-dev-factory ansible_ssh_host=fermicloud562.fnal.gov
+fermicloud562.fnal.gov
+summer-project-factory ansible_ssh_host=fermicloud573.fnal.gov
+fermicloud573.fnal.gov
+htcccb01 ansible_ssh_host=htcccb01.fnal.gov
+htcccb01.fnal.gov
+ruciodev01-ivm ansible_ssh_host=ruciodev01.fnal.gov
+ruciodev01.fnal.gov
+htcjsdev03 ansible_ssh_host=htcjsdev03.fnal.gov
+htcjsdev03.fnal.gov
+tanya_development_ferry ansible_ssh_host=fermicloud490.fnal.gov
+fermicloud490.fnal.gov
+llobato-fts-client ansible_ssh_host=fermicloud557.fnal.gov
+fermicloud557.fnal.gov
+llobato-fts-transfer ansible_ssh_host=fermicloud586.fnal.gov
+fermicloud586.fnal.gov
+coimbra-frontend-39-dev ansible_ssh_host=fermicloud509.fnal.gov
+fermicloud509.fnal.gov
+coimbra-factory-39-dev ansible_ssh_host=fermicloud574.fnal.gov
+fermicloud574.fnal.gov
+coimbra-frontend-37-dev ansible_ssh_host=fermicloud511.fnal.gov
+fermicloud511.fnal.gov
+coimbra-factory-37-dev ansible_ssh_host=fermicloud515.fnal.gov
+fermicloud515.fnal.gov
+tanya_test_voms_ferry ansible_ssh_host=fermicloud599.fnal.gov
+fermicloud599.fnal.gov
+test_nfs ansible_ssh_host=fermicloud553.fnal.gov
+fermicloud553.fnal.gov
+stashcache ansible_ssh_host=stashcache.fnal.gov
+stashcache.fnal.gov
+kotwal_sl7 ansible_ssh_host=fermicloud568.fnal.gov
+fermicloud568.fnal.gov
+gwms-web ansible_ssh_host=gwms-web.fnal.gov
+gwms-web.fnal.gov
+gwms-dev-factory ansible_ssh_host=gwms-dev-factory.fnal.gov
+gwms-dev-factory.fnal.gov
+gwms-dev-frontend ansible_ssh_host=gwms-dev-frontend.fnal.gov
+gwms-dev-frontend.fnal.gov
+htcjsdev02 ansible_ssh_host=htcjsdev02.fnal.gov
+htcjsdev02.fnal.gov
+htcjsdev01 ansible_ssh_host=htcjsdev01.fnal.gov
+htcjsdev01.fnal.gov
+hepclumberjacksched01 ansible_ssh_host=fermicloud510.fnal.gov
+fermicloud510.fnal.gov
+mm-hepcloud-test1 ansible_ssh_host=fermicloud516.fnal.gov
+fermicloud516.fnal.gov
+dbox-dev ansible_ssh_host=fermicloud580.fnal.gov
+fermicloud580.fnal.gov
+adlinux ansible_ssh_host=adlinux.fnal.gov
+adlinux.fnal.gov
+bjwhite-dev ansible_ssh_host=fermicloud523.fnal.gov
+fermicloud523.fnal.gov
+epatontest ansible_ssh_host=fermicloud514.fnal.gov
+fermicloud514.fnal.gov
+dbox-ce-5 ansible_ssh_host=fermicloud528.fnal.gov
+fermicloud528.fnal.gov
+Lydia-test-install ansible_ssh_host=fermicloud499.fnal.gov
+fermicloud499.fnal.gov
+timm-test-osg36-with-tokens ansible_ssh_host=fermicloud546.fnal.gov
+fermicloud546.fnal.gov
+timm-test-osg35-with-tokens ansible_ssh_host=fermicloud593.fnal.gov
+fermicloud593.fnal.gov
+htccolldev02 ansible_ssh_host=htccolldev02.fnal.gov
+htccolldev02.fnal.gov
+htccolldev01 ansible_ssh_host=htccolldev01.fnal.gov
+htccolldev01.fnal.gov
+htccedev01 ansible_ssh_host=htccedev01.fnal.gov
+htccedev01.fnal.gov
+lisa_de ansible_ssh_host=fermicloud482.fnal.gov
+fermicloud482.fnal.gov
+test-scd-security-group ansible_ssh_host=fermicloud461.fnal.gov
+fermicloud461.fnal.gov
+timm-test-reactjs2 ansible_ssh_host=fermicloud411.fnal.gov
+fermicloud411.fnal.gov
+timm-test-reactjs ansible_ssh_host=fermicloud425.fnal.gov
+fermicloud425.fnal.gov
+nonetwork_manager ansible_ssh_host=fermicloud483.fnal.gov
+fermicloud483.fnal.gov
+test_sl10 ansible_ssh_host=fermicloud474.fnal.gov
+fermicloud474.fnal.gov
+coimbra-frontend-test ansible_ssh_host=fermicloud406.fnal.gov
+fermicloud406.fnal.gov
+coimbra-factory-test ansible_ssh_host=fermicloud442.fnal.gov
+fermicloud442.fnal.gov
+dbox-factory ansible_ssh_host=fermicloud466.fnal.gov
+fermicloud466.fnal.gov
+dbox-frontend ansible_ssh_host=fermicloud481.fnal.gov
+fermicloud481.fnal.gov
+coimbra-hepcloud-dev ansible_ssh_host=fermicloud465.fnal.gov
+fermicloud465.fnal.gov
+gwms-ce-nurs ansible_ssh_host=fermicloud445.fnal.gov
+fermicloud445.fnal.gov
+timm-de-patch-stream ansible_ssh_host=fermicloud467.fnal.gov
+fermicloud467.fnal.gov
+timm-de-trunk-stream ansible_ssh_host=fermicloud414.fnal.gov
+fermicloud414.fnal.gov
+timm-de-prod-stream ansible_ssh_host=fermicloud435.fnal.gov
+fermicloud435.fnal.gov
+timm-rucio-ops ansible_ssh_host=fermicloud459.fnal.gov
+fermicloud459.fnal.gov
+gwms_v37_frontend_nurs ansible_ssh_host=fermicloud452.fnal.gov
+fermicloud452.fnal.gov
+gwms_v37_factory_nurs ansible_ssh_host=fermicloud439.fnal.gov
+fermicloud439.fnal.gov
+vomsdev1 ansible_ssh_host=vomsdev1.fnal.gov
+vomsdev1.fnal.gov
+vomsdev2 ansible_ssh_host=vomsdev2.fnal.gov
+vomsdev2.fnal.gov
+statictest1 ansible_ssh_host=statictest1.fnal.gov
+statictest1.fnal.gov
+knoepfel-hepcloud-dev ansible_ssh_host=fermicloud444.fnal.gov
+fermicloud444.fnal.gov
+vito_de ansible_ssh_host=fermicloud479.fnal.gov
+fermicloud479.fnal.gov
+marco_de ansible_ssh_host=fermicloud462.fnal.gov
+fermicloud462.fnal.gov
+jobsub_client ansible_ssh_host=fermicloud436.fnal.gov
+fermicloud436.fnal.gov
+sbhat-gwms ansible_ssh_host=fermicloud401.fnal.gov
+fermicloud401.fnal.gov
+sbhat-dev-hepcloud-de ansible_ssh_host=fermicloud405.fnal.gov
+fermicloud405.fnal.gov
+dbox-openstack1 ansible_ssh_host=fermicloud446.fnal.gov
+fermicloud446.fnal.gov
+jobsub_dev_client_sbhat ansible_ssh_host=fermicloud236.fnal.gov
+fermicloud236.fnal.gov
+cdcvs_dev ansible_ssh_host=fermicloud260.fnal.gov
+fermicloud260.fnal.gov
+poms_dev ansible_ssh_host=fermicloud210.fnal.gov
+fermicloud210.fnal.gov
+spack_build ansible_ssh_host=fermicloud298.fnal.gov
+fermicloud298.fnal.gov
