@@ -25,6 +25,7 @@
               - globus-ftp-client-devel
               - boost169-devel
               - munge-devel
+              - osg-wn-client
           state:
               present
 

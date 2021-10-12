@@ -107,6 +107,6 @@
       ansible.builtin.replace:
         path: /etc/gwms-factory/config.d/Site_Entry.xml
         regexp: '__CONDOR_VERSION__'
-        replace: '9.0.2'
+        replace: '9.0.5'
 
 ...

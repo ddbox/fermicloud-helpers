@@ -1,6 +1,8 @@
 fermicloud495.fnal.gov
 fermicloud588.fnal.gov
+dbox_smoke_fact ansible_ssh_host=fermicloud588.fnal.gov
 fermicloud505.fnal.gov
+dbox_smoke_vofe ansible_ssh_host=fermicloud505.fnal.gov
 openstackuigpvm01.fnal.gov  ansible_ssh_user=dbox
 fermicloud579.fnal.gov
 fermicloud597.fnal.gov

@@ -3,7 +3,7 @@
     hosts: all
     remote_user: root
     vars:
-        osg_rel: 3.5
+        osg_rel: "3.5"
         osg_repo: "osg"
         os_major: 7
         epel_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{os_major}}.noarch.rpm"
@@ -14,7 +14,9 @@
       yum: name={{epel_url}}
 
     - name: install {{osg_url}}
-      yum: name={{osg_url}}
+      yum: 
+        name: "{{osg_url}}"
+        disable_gpg_check: true
 
     - name: fix epel priorities
       ansible.builtin.replace:

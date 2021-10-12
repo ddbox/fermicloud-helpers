@@ -23,7 +23,7 @@
     import_playbook: config_condor_tarballs.yml -e condor_rel=8.9.11
 
   - name: config_condor_tarballs
-    import_playbook: config_condor_tarballs.yml -e condor_rel=9.0.2
+    import_playbook: config_condor_tarballs.yml -e condor_rel=9.0.5
 
   - name: config glideinWMS.xml
     import_playbook: config_factory_files.yml 

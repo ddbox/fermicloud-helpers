@@ -1,13 +1,10 @@
 ---
-# file: register_openstack.yml
-# takes an encrypted services password file and an ansible password as input, generates an openstack token
-# that can be used with the openstack API to provision resources
+# file: rebuild_instance.yml
 # usage:
-#      ansible-playbook  -l openstackuigpvm01.fnal.gov register_openstack.yml  --vault-password-file vault_pass -e project=jobsub
-#           parameters -e  project   default=>glideinwms
-#                      --vault-password-file: ansible vault password to decrypt vault.yml
-#
-  - name: register_openstack.yml
+#  ansible-playbook -l openstackuigpvm01.fnal.gov rebuild_instance.yml  --vault-password-file vault_pass -e project=jobsub -e machine_instance=dbox_api_test9 -e security_group=jobsub-ports
+
+
+  - name: rebuild_instance.yml
     hosts: all
     gather_facts: no
     vars:
@@ -15,8 +12,8 @@
         machine_instance: "dbox_smoke_vofe"
         security_group: "gwms-ports"
 
-    vars_files:
-      - vault_contents.yml
+        #    vars_files:
+        #- vault_contents.yml
 
     tasks:
 
