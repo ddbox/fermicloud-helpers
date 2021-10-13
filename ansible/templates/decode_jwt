@@ -3,12 +3,14 @@
 # modified to optionally read from stdin and to print both parts of the token
 
 help() {
+    echo
     echo "usage $0 <a_jwt_token>"
     echo "usage $0 -human <a_jwt_token>"
     echo "usage $0 -help"
     echo "translates <a_jwt_token> from base64 into readable format"
     echo "-human translates dates from epoch to human readable"
     echo " NB <a_jwt_token> can be either stdin, or a file containing base64"
+    echo
     exit 0
 }
 
@@ -23,26 +25,28 @@ decode_base64_url() {
 
 decode_jwt() {
     TOKEN=$1
-    decode_base64_url "`echo "$TOKEN"|cut -d. -f1`" | jq .
-    decode_base64_url "`echo "$TOKEN"|cut -d. -f2`" | jq .
+    decode_base64_url "$(echo "$TOKEN"|cut -d. -f1)" | jq .
+    decode_base64_url "$(echo "$TOKEN"|cut -d. -f2)" | jq .
 }
 
 human_dates() {
-    for w in "$@"; do
-        echo $w | grep -iE '{|}|"'
+    for wrd in "$@"; do
+        echo "$wrd" | grep -iE '{|}|"'
+        # shellcheck disable=2181
         if [ "$?" -ne 0 ]; then
-            #echo test $w1 >&2
-            w1=$(echo $w | sed -e s'/,//')
-            if echo $w1 | grep -q "[0-9]"; then
-               #echo pass $w1 >&2
-               #d=$(jq -n $(echo $w1 | strftime("%B %d %Y %I:%M%p %Z")))
-               d=$(echo $w1 | jq 'todate')
-               echo $d
-               if echo $w | grep -q ',' ; then
+            # w1=${wrd//,//} gives parse errors
+            # shellcheck disable=2001
+            w1=$(echo "$wrd" | sed -e s'/,//')
+            if echo "$w1" | grep -q "[0-9]"; then
+               # jq parses this wrong if w1 is quoted 
+               # shellcheck disable=2086 
+               date=$(echo $w1 | jq 'todate')
+               echo "$date"
+               if echo "$wrd" | grep -q ',' ; then
                    echo ','
                fi
             else
-                echo $w
+                echo "$wrd"
             fi
         fi
     done
@@ -52,28 +56,31 @@ human_dates() {
 DATE_FMT='epoch'
 
 if [[ $# -ge 1 ]] ;then
-    if [ $1 = '-help' ] || [ $1 = '-h' ]; then
+    if [ "$1" = '-help' ] || [ "$1" = '-h' ]; then
        help 
        exit 0
     fi
-    if [ $1 = '-human' ]; then
+    if [ "$1" = '-human' ]; then
         DATE_FMT=$1
         shift
     fi
 fi
 
 if [ $# = 0 ];then
-    read TOKEN
+    read -r TOKEN
 elif [ -f "$1" ]; then
-    TOKEN=$(cat $1)
+    TOKEN=$(cat "$1")
 else
     TOKEN="$1"
 fi
 
-JWT="$(decode_jwt $TOKEN)"
+JWT="$(decode_jwt "$TOKEN")"
 if [ "$DATE_FMT" = "epoch" ] ; then
-   echo $JWT | jq .
+   echo "$JWT" | jq .
 else
+   # jq and human_dates both parse incorrectly if quoted
+   # shellcheck disable=2086 
    READABLE="$(human_dates $JWT)"
+   # shellcheck disable=2086 
    echo $READABLE | jq .
 fi
