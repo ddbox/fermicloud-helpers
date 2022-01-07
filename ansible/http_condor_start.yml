@@ -20,6 +20,18 @@
         state: started
         masked: no
 
+    - name: add SSL auth to condor
+      ansible.builtin.replace:
+        path: /etc/condor/config.d/03_gwms_local.config
+        regexp: '^(SEC_DEFAULT_AUTHENTICATION_METHODS = .+)$'
+        replace: 'SEC_DEFAULT_AUTHENTICATION_METHODS = IDTOKENS,SCITOKENS,SSL,FS,GSI'
+
+    - name: tweak SSL auth in condor
+      ansible.builtin.lineinfile:
+          path: /etc/condor/config.d/03_gwms_local.config
+          insertbefore: BOF
+          line: "AUTH_SSL_REQUIRE_CLIENT_CERTIFICATE = True"
+
     - name: Enable the condor daemon in systemd
       systemd:
         name: condor

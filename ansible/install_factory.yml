@@ -6,15 +6,17 @@
         osg_rel: 3.5
         osg_repo: "osg"
         os_major: 7
-        vofrontend_fqdn: "fermicloud481.fnal.gov"
 
     tasks:
 
   - name: install_epel_osg_rpms.yml
-    import_playbook: install_epel_osg_rpms.yml -e osg_rel=3.5 -e os_major=7
+    import_playbook: install_epel_osg_rpms.yml #-e osg_rel=3.5 -e os_major=7
+
+  - name: install_various_rpms.yml
+    import_playbook: install_various_rpms.yml
 
   - name: install_factory_rpms.yml
-    import_playbook: install_factory_rpms.yml -e osg_repo=osg
+    import_playbook: install_factory_rpms.yml #-e osg_repo=osg
 
   - name: install_factory_config_files.yml
     import_playbook: install_factory_config_files.yml

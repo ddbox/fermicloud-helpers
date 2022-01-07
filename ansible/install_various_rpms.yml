@@ -1,0 +1,36 @@
+---
+  - name: install prereq
+    hosts: all
+    remote_user: root
+    vars:
+        osg_repo: "osg"
+    tasks:
+
+    - name: install prereq packages 
+      yum:
+          name:
+              - yum-priorities
+              - osg-ca-certs
+              - globus-rsl-devel
+              - globus-gsi-sysconfig-devel
+              - globus-gsi-callback-devel
+              - globus-gss-assist-devel
+              - globus-xio-gsi-driver
+              - globus-gssapi-error
+              - globus-io-devel
+              - globus-ftp-client-devel
+              - boost169-devel
+              - munge-devel
+              - osg-wn-client
+              - osg-token-renewer
+              - ack
+              - ShellCheck
+              - tk
+              - fermilab-util_kx509
+              - htgettoken
+              - oidc-agent
+          state:
+              present
+
+
+...

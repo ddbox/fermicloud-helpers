@@ -31,16 +31,18 @@
         group: "frontend"
 
     - name: install proxy generating script 
-      copy:
+      ansible.builtin.copy:
         src: templates/make-proxies.sh
         dest: /root/make-proxies.sh
         mode: "u=rwx,g=rx,o=r"
         owner: "root"
         group: "root"
+        force: true
 
     - name: run proxy generating script
       shell: |
           /root/make-proxies.sh
+
     - name: copy testuser condor jdf
       copy:
           src: templates/testjobs

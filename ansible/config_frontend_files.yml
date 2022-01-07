@@ -74,4 +74,17 @@
         insertbefore: 'GSI (.*) anonymous' 
         line: 'GSI "{{ce_dn}}" compute_element'
 
+
+    - name: "add info to map_file 4"
+      ansible.builtin.lineinfile:
+        path: /etc/condor/certs/condor_mapfile
+        insertbefore: 'GSI (.*) anonymous' 
+        line: 'SSL (.*{{gwms.fact_node}}.) condor'
+
+    - name: "add info to map_file 5"
+      ansible.builtin.lineinfile:
+        path: /etc/condor/certs/condor_mapfile
+        insertbefore: 'GSI (.*) anonymous' 
+        line: 'SSL (.*) anonymous'
+
 ...

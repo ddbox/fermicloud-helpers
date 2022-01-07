@@ -79,6 +79,18 @@
         insertbefore: 'GSI (.*) anonymous' 
         line: 'GSI "{{ce_dn}}" compute_element'
 
+    - name: "add info to map_file 4"
+      ansible.builtin.lineinfile:
+        path: /etc/condor/certs/condor_mapfile
+        insertbefore: 'GSI (.*) anonymous' 
+        line: 'SSL (.*{{gwms.vofe_node}}.) condor'
+
+    - name: "add info to map_file 5"
+      ansible.builtin.lineinfile:
+        path: /etc/condor/certs/condor_mapfile
+        insertbefore: 'GSI (.*) anonymous' 
+        line: 'SSL (.*) anonymous'
+
     - name: "edit /etc/gwms-factory/config.d/Site_Entry.xml 1"
       ansible.builtin.replace:
         path: /etc/gwms-factory/config.d/Site_Entry.xml

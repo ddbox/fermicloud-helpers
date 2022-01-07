@@ -14,14 +14,7 @@
         owner: "root"
         group: "root"
 
-
-    - name: install decode_jwt_human
-      copy:
-        src: templates/decode_jwt_human
-        dest: /usr/local/bin
-        mode: "u=rwx,g=rx,o=rx"
-        owner: "root"
-        group: "root"
+ 
 
     - name: root .bashrc with condor_authtable
       copy:
