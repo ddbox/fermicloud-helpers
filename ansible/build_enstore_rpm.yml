@@ -1,0 +1,96 @@
+---
+  - name: install packages needed to build enstore rpm on fermicloud node
+    hosts: all
+    remote_user: root
+
+    tasks:
+
+    - name: install centos.repo
+      copy:
+        src: templates/centos.repo
+        dest: /etc/yum.repos.d
+        mode: "u=rwx,g=rx,o=rx"
+        owner: "root"
+        group: "root"
+
+    - name: import centos key
+      shell:  |
+          rpm --import http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-7
+
+    - name: import centos SIG-SCLo key
+      shell:  |
+          rpm --import https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+    - name: install enstore repo
+      copy:
+        src: templates/enstore.repo
+        dest: /etc/yum.repos.d
+        mode: "u=rwx,g=rx,o=rx"
+        owner: "root"
+        group: "root"
+
+    - name: yum misc
+      shell:  |
+         yum clean all
+         yum-config-manager --enable enstore centos-atomic centos-base centos-dotnet centos-extras centos-fasttrack centos-plus centos-update
+
+
+    - name: install packages
+      yum:
+        name:
+          - centos-release-scl-rh
+          - postgresql11-devel-11.8
+          - postgresql11-contrib-11.8
+          - postgresql11-libs-11.8
+          - postgresql11-server-11.8
+          - swig-enstore-1_883-1
+          - Python-enstore2.7-16.0.0-1
+          - gitflow
+          - ncompress
+          - gnuplot
+          - ImageMagick
+          - tcl
+          - tk
+          - rpm-build
+          - gcc
+        state: present
+
+    - name: ensure enstore group present
+      group:
+        name: enstore
+        gid: 6209
+        state: present
+
+    - name: ensure enstore user present
+
+      user:
+        name: enstore
+        uid: 5744
+        groups: enstore
+        home: /home/enstore
+        state: present
+    
+    - name: create setup_enstore
+      copy:
+        src: templates/setup-enstore
+        dest: /home/enstore/setup-enstore
+        mode: "u=rwx,g=rx,o=rx"
+        group: enstore
+        owner: enstore
+
+    - name: create build_enstore_rpm.sh
+      copy:
+        src: templates/build_enstore_rpm.sh
+        dest: /home/enstore/build_enstore_rpm.sh
+        mode: "u=rwx,g=rx,o=rx"
+        group: enstore
+        owner: enstore
+
+    - name: execute build_enstore_rpm.sh
+      ansible.builtin.command: /home/enstore/build_enstore_rpm.sh
+      become: yes
+      become_user: enstore
+      args:
+        chdir: /home/enstore   
+
+...
